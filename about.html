@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ISO15118-20 Protocol - Complete Technical Overview</title>
+    <meta name="description" content="Comprehensive overview of ISO15118-20 EV charging communication protocol, including key features, improvements over previous versions, and implementation details.">
+    <meta name="keywords" content="ISO15118-20 protocol, EV charging communication, Plug and Charge, V2G, bidirectional charging">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ISO15118-20.com</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="about.html">About Protocol</a></li>
+                    <li><a href="technical.html">Technical Details</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="industry.html">Industry Insights</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h1>About the ISO15118-20 Protocol</h1>
+
+            <div class="content-section">
+                <p>ISO15118-20 represents the latest evolution in electric vehicle charging communication standards, introducing revolutionary capabilities that transform the EV charging experience through enhanced security, bidirectional power transfer, and seamless user experiences.</p>
+            </div>
+
+            <!-- Protocol Overview -->
+            <div class="content-section">
+                <h2>Protocol Overview</h2>
+                <p>The ISO15118-20 standard defines the communication interface and protocol between electric vehicles (EVs) and EV supply equipment (EVSE) for both conductive and wireless power transfer. This standard enables sophisticated energy management, secure authentication, and automated billing processes.</p>
+
+                <div class="highlight-box">
+                    <h3>Key Objectives</h3>
+                    <ul>
+                        <li>Enable seamless Plug & Charge functionality with enhanced security</li>
+                        <li>Support bidirectional power transfer for Vehicle-to-Grid (V2G) applications</li>
+                        <li>Provide robust security through mutual authentication and encryption</li>
+                        <li>Support wireless power transfer communication protocols</li>
+                        <li>Ensure global interoperability across different charging networks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Key Improvements -->
+            <div class="content-section">
+                <h2>Key Improvements Over ISO15118-2</h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Enhanced Security</h3>
+                        <p>Upgraded from secp256r1 to secp521r1 or Ed448 cryptographic curves, with mutual TLS 1.3 authentication providing quantum-resistant security foundations.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Bidirectional Power Transfer</h3>
+                        <p>Native support for Vehicle-to-Grid (V2G), Vehicle-to-Home (V2H), and Vehicle-to-Load (V2L) applications through structured power flow management.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Multiple Contracts</h3>
+                        <p>Support for multiple charging contracts and service providers within a single charging session, enabling complex energy service arrangements.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Wireless Integration</h3>
+                        <p>Comprehensive support for wireless power transfer (WPT) communication, enabling automated parking and charging systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Components -->
+            <div class="content-section">
+                <h2>Core Protocol Components</h2>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">1</div>
+                        <div>
+                            <h4>Physical Layer (ISO15118-3)</h4>
+                            <p>Defines the physical connection interface including PLC (Power Line Communication) and wireless communication methods.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">2</div>
+                        <div>
+                            <h4>Network & Transport Layer (ISO15118-4)</h4>
+                            <p>Manages network communication protocols including IPv6, TCP, and UDP for reliable data transmission.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">3</div>
+                        <div>
+                            <h4>Application Layer (ISO15118-20)</h4>
+                            <p>Defines the high-level communication protocol including message formats, authentication, and charging control.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">4</div>
+                        <div>
+                            <h4>Security Layer (ISO15118-5)</h4>
+                            <p>Comprehensive security framework including PKI infrastructure, certificate management, and encryption protocols.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Communication Flow -->
+            <div class="content-section">
+                <h2>Communication Flow</h2>
+                <p>The ISO15118-20 communication process follows a structured sequence of interactions between the EV and charging station:</p>
+
+                <div class="highlight-box">
+                    <h3>Charging Session Sequence</h3>
+                    <ol>
+                        <li><strong>Connection & Detection:</strong> Physical connection established and communication initiated</li>
+                        <li><strong>Authentication & Authorization:</strong> Certificate-based mutual authentication between EV and EVSE</li>
+                        <li><strong>Service Discovery:</strong> Available charging services and capabilities negotiated</li>
+                        <li><strong>Contract Certificate Installation:</strong> Digital contracts and payment certificates provisioned</li>
+                        <li><strong>Charging Parameter Exchange:</strong> Power requirements and constraints communicated</li>
+                        <li><strong>Power Delivery:</strong> Controlled energy transfer with continuous monitoring</li>
+                        <li><strong>Session Termination:</strong> Secure session closure with billing information exchange</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Technical Specifications -->
+            <div class="content-section">
+                <h2>Technical Specifications</h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Communication Protocol</h3>
+                        <ul>
+                            <li>Transport: TCP/UDP over IPv6</li>
+                            <li>Encoding: EXI (Efficient XML Interchange)</li>
+                            <li>Security: Mutual TLS 1.3</li>
+                            <li>Certificates: X.509 v3 with enhanced key sizes</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Power Transfer</h3>
+                        <ul>
+                            <li>AC Charging: Single and three-phase</li>
+                            <li>DC Charging: Up to 1000V, 1000A</li>
+                            <li>Bidirectional: Full V2G capability</li>
+                            <li>Wireless: Inductive and resonant coupling</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Security Features</h3>
+                        <ul>
+                            <li>Cryptographic Curves: secp521r1, Ed448</li>
+                            <li>Hash Algorithms: SHA-256, SHA-3</li>
+                            <li>Certificate Validation: OCSP, CRL</li>
+                            <li>Key Management: Automated provisioning</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Service Capabilities</h3>
+                        <ul>
+                            <li>Multiple Contract Support</li>
+                            <li>Dynamic Pricing Integration</li>
+                            <li>Load Management</li>
+                            <li>Grid Services Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Considerations -->
+            <div class="content-section">
+                <h2>Implementation Considerations</h2>
+
+                <h3>Backward Compatibility</h3>
+                <p>While ISO15118-20 introduces significant improvements, it maintains compatibility pathways with ISO15118-2 systems. However, full feature compatibility requires infrastructure upgrades due to enhanced security requirements and new message formats.</p>
+
+                <h3>Certification Requirements</h3>
+                <p>Implementation of ISO15118-20 requires comprehensive certification covering protocol conformance, interoperability testing, and security validation. This ensures reliable operation across different vendor implementations.</p>
+
+                <h3>Infrastructure Requirements</h3>
+                <p>Successful deployment requires updated PKI infrastructure, enhanced hardware security modules (HSMs), and network infrastructure capable of supporting the increased security and communication requirements.</p>
+            </div>
+
+            <!-- Industry Adoption -->
+            <div class="content-section">
+                <h2>Industry Adoption Status</h2>
+                <p>ISO15118-20 is in the early adoption phase with major OEMs and charging infrastructure providers beginning implementations throughout 2024-2025. Key milestones include:</p>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">2022</div>
+                        <div>
+                            <h4>Standard Publication</h4>
+                            <p>ISO15118-20 officially published by ISO, providing the foundation for industry implementation.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">2024</div>
+                        <div>
+                            <h4>Pilot Deployments</h4>
+                            <p>Leading automotive OEMs and charging providers launch pilot programs and early implementations.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">2025</div>
+                        <div>
+                            <h4>Commercial Rollout</h4>
+                        <p>Widespread commercial deployment begins with major charging networks and vehicle manufacturers.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">2026</div>
+                        <div>
+                            <h4>Market Maturity</h4>
+                            <p>Expected achievement of broad market adoption and interoperability across major markets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.iso.org/standard/77845.html">ISO Standard</a></li>
+                        <li><a href="technical.html">Technical Documentation</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Industry</h4>
+                    <ul>
+                        <li><a href="https://www.charinev.org/">CharIN Association</a></li>
+                        <li><a href="industry.html">Market Analysis</a></li>
+                        <li><a href="features.html">Protocol Features</a></li>
+                        <li><a href="advertise.html">Advertising</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://linkedin.com/company/iso15118-20">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/iso15118_20">Twitter</a></li>
+                        <li><a href="https://github.com/iso15118-20">GitHub</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ISO15118-20.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
